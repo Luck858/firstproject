@@ -1,1 +1,15 @@
 this is js file  is updated
+
+name: Simple Workflow
+
+on: [push] # triggers when code is pushed
+
+jobs:
+  demo-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+      - name: Say Hello
+        run: echo "Hello from GitHub Actions!"
+
