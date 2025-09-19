@@ -1,12 +1,12 @@
-name: Simple Workflow
-
-on: [push] # triggers when code is pushed
-
+---
+name: basic workflow
+on:
+  push:
+    branches:
+      - main
 jobs:
-  demo-job:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v5
-      - name: Say Hello
-        run: echo "Hello from GitHub Actions!"
+      - name: lowlevel command
+        run: echo hello
